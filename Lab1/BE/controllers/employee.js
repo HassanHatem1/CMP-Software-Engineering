@@ -20,7 +20,7 @@ exports.createEmployee = async (req, res, next) => {
   if (!/^[A-Za-z\s]+$/.test(newEmployee.name)) {  
     res.status(400).json({ message: 'Invalid name' });
     return;   
-   }
+   } 
    if(newEmployee.id < 1)
     {
       res.status(400).json({ message: 'Invalid id' });
