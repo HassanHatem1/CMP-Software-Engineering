@@ -59,13 +59,8 @@ function createEmployee() {
   })
   .then(response => response.json()) // parse the response as JSON
   .then(data => {
-    console.log('Success:', data);
     fetchEmployees(); // Refresh the table
   })
-  .catch((error) => {
-    console.error('Error:', error);
-    alert('An error occurred: ' + error.message);
-  });
 }
 
 // TODO
@@ -76,7 +71,6 @@ function deleteEmployee(id) {
   })
   .then(response => response.json())
   .then(data => {
-    console.log('Success:', data);
     fetchEmployees(); // Refresh the table
   })
 }
